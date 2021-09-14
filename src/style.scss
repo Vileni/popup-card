@@ -1,0 +1,207 @@
+@use "global";
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap");
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin for-p {
+    color: global.$text-color;
+    font-weight: 400;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+}
+
+body {
+    height: 100vh;
+    background-image: linear-gradient(
+        to right top,
+        #d16ba5,
+        #c575b7,
+        #b67ec5,
+        #a488d0,
+        #9291d7,
+        #829ee2,
+        #70aaea,
+        #5eb5ef,
+        #46c8f8,
+        #37dafb,
+        #40ebf8,
+        #5ffbf1
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .card-cnt {
+        width: 430px;
+        margin: 0 20px;
+        height: 541px;
+        background-color: white;
+        border-radius: 10px;
+
+        .img-cnt {
+            border-radius: 10px 10px 0 0;
+            position: relative;
+            background-color: global.$pattern-bg;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+            h2 {
+                position: absolute;
+                color: white;
+                width: 310px;
+                text-align: center;
+                font-family: "Work Sans", sans-serif;
+                font-size: 26px;
+                font-weight: 600;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .bottom-cnt {
+            p[p="top"] {
+                color: global.$text-color;
+                font-weight: 400;
+                font-family: "Work Sans", sans-serif;
+                font-size: 14px;
+                line-height: 19px;
+                height: 38px;
+                margin: 0 auto;
+                width: 382px;
+                margin: 24px 24px;
+                text-align: center;
+            }
+            .inp-sub {
+                input {
+                    width: 259px;
+                    font-family: "Work Sans", sans-serif;
+                    border-radius: 5px;
+                    height: 44px;
+                    background: #f5f7fa;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    text-align: c;
+                    border: 1px solid #e6e8f0;
+                    color: #353a3a;
+                    padding: 14px 18px;
+                    margin: 0 0 16px 24px;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+                button {
+                    background-color: global.$pattern-bg;
+                    color: white;
+                    width: 115px;
+                    height: 44px;
+                    border-radius: 5px;
+                    padding: 14px 18px;
+                    border: none;
+                    margin-left: 8px;
+                    font-weight: 600;
+                    line-height: 16px;
+                    font-size: 14px;
+                    font-family: "Work Sans", sans-serif;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            p[p="mid"] {
+                color: global.$text-color-light;
+                font-weight: 400;
+                font-size: 14px;
+                font-family: "Work Sans", sans-serif;
+                margin-left: 24px;
+            }
+            .avatar-cnt {
+                display: flex;
+                justify-content: center;
+                height: 45px;
+                margin-top: 36px;
+                margin-bottom: 16px;
+
+                .info {
+                    p:first-of-type {
+                        font-weight: 600;
+                        line-height: 16px;
+                        color: #000000;
+                        margin-left: 8px;
+                    }
+                    p {
+                        margin-left: 8px;
+
+                        @include for-p();
+                    }
+                }
+            }
+            p[p="bottom"] {
+                @include for-p();
+                width: 382px;
+                line-height: 19px;
+                font-size: 14;
+                text-align: center;
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 450px) {
+    body {
+        .card-cnt {
+            height: auto;
+            width: calc(100% - 1rem);
+            .img-cnt {
+                h2 {
+                    width: 90%;
+                    font-size: 7vw;
+                }
+            }
+            .bottom-cnt {
+                p[p="top"] {
+                    margin: 24px auto;
+                    width: 90%;
+                }
+
+                .inp-sub {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    input {
+                        width: 90%;
+                        margin: 0 auto;
+                        margin-bottom: 12px;
+                    }
+                    button {
+                        margin: 0 auto;
+                        margin-bottom: 16px;
+                    }
+                }
+                p[p="mid"] {
+                    text-align: center;
+                }
+                .avatar-cnt {
+                    margin-top: 24px;
+                    width: 90%;
+                }
+
+                p[p="bottom"] {
+                    width: 90%;
+                    padding-bottom: 16px;
+                }
+            }
+        }
+    }
+}

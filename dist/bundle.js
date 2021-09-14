@@ -1,0 +1,1 @@
+!function(){"use strict";document.querySelector("button").onclick=function(){alert("Thanks For Click!")}}();
