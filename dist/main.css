@@ -1,2 +1,218 @@
 @import url(https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap);
-*,::after,::before{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box}body{height:100vh;background-image:-webkit-gradient(linear, left bottom, right top, from(#d16ba5), color-stop(#c575b7), color-stop(#b67ec5), color-stop(#a488d0), color-stop(#9291d7), color-stop(#829ee2), color-stop(#70aaea), color-stop(#5eb5ef), color-stop(#46c8f8), color-stop(#37dafb), color-stop(#40ebf8), to(#5ffbf1));background-image:linear-gradient(to right top, #d16ba5, #c575b7, #b67ec5, #a488d0, #9291d7, #829ee2, #70aaea, #5eb5ef, #46c8f8, #37dafb, #40ebf8, #5ffbf1);display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}body .card-cnt{width:430px;margin:0 20px;height:541px;background-color:#fff;border-radius:10px}body .card-cnt .img-cnt{border-radius:10px 10px 0 0;position:relative;background-color:#2355f2}body .card-cnt .img-cnt img{width:100%;height:auto}body .card-cnt .img-cnt h2{position:absolute;color:#fff;width:310px;text-align:center;font-family:"Work Sans",sans-serif;font-size:26px;font-weight:600;left:50%;top:50%;-webkit-transform:translate(-50%, -50%);transform:translate(-50%, -50%)}body .card-cnt .bottom-cnt p[p=top]{color:#595959;font-weight:400;font-family:"Work Sans",sans-serif;font-size:14px;line-height:19px;height:38px;margin:0 auto;width:382px;margin:24px 24px;text-align:center}body .card-cnt .bottom-cnt .inp-sub input{width:259px;font-family:"Work Sans",sans-serif;border-radius:5px;height:44px;background:#f5f7fa;font-weight:400;font-size:14px;line-height:16px;text-align:c;border:1px solid #e6e8f0;color:#353a3a;padding:14px 18px;margin:0 0 16px 24px}body .card-cnt .bottom-cnt .inp-sub input:focus{outline:none}body .card-cnt .bottom-cnt .inp-sub button{background-color:#2355f2;color:#fff;width:115px;height:44px;border-radius:5px;padding:14px 18px;border:none;margin-left:8px;font-weight:600;line-height:16px;font-size:14px;font-family:"Work Sans",sans-serif}body .card-cnt .bottom-cnt .inp-sub button:hover{cursor:pointer}body .card-cnt .bottom-cnt p[p=mid]{color:#a6a6a6;font-weight:400;font-size:14px;font-family:"Work Sans",sans-serif;margin-left:24px}body .card-cnt .bottom-cnt .avatar-cnt{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;height:45px;margin-top:36px;margin-bottom:16px}body .card-cnt .bottom-cnt .avatar-cnt .info p:first-of-type{font-weight:600;line-height:16px;color:#000;margin-left:8px}body .card-cnt .bottom-cnt .avatar-cnt .info p{margin-left:8px;color:#595959;font-weight:400;font-family:"Work Sans",sans-serif;font-size:14px}body .card-cnt .bottom-cnt p[p=bottom]{color:#595959;font-weight:400;font-family:"Work Sans",sans-serif;font-size:14px;width:382px;line-height:19px;font-size:14;text-align:center;margin:0 auto}@media(max-width: 450px){body .card-cnt{height:auto;width:calc(100% - 1rem)}body .card-cnt .img-cnt h2{width:90%;font-size:7vw}body .card-cnt .bottom-cnt p[p=top]{margin:24px auto;width:90%}body .card-cnt .bottom-cnt .inp-sub{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-align:center;-ms-flex-align:center;align-items:center}body .card-cnt .bottom-cnt .inp-sub input{width:90%;margin:0 auto;margin-bottom:12px}body .card-cnt .bottom-cnt .inp-sub button{margin:0 auto;margin-bottom:16px}body .card-cnt .bottom-cnt p[p=mid]{text-align:center}body .card-cnt .bottom-cnt .avatar-cnt{margin-top:24px;width:90%}body .card-cnt .bottom-cnt p[p=bottom]{width:90%;padding-bottom:16px}}
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-image: -webkit-gradient(
+        linear,
+        left bottom,
+        right top,
+        from(#d16ba5),
+        color-stop(#c575b7),
+        color-stop(#b67ec5),
+        color-stop(#a488d0),
+        color-stop(#9291d7),
+        color-stop(#829ee2),
+        color-stop(#70aaea),
+        color-stop(#5eb5ef),
+        color-stop(#46c8f8),
+        color-stop(#37dafb),
+        color-stop(#40ebf8),
+        to(#5ffbf1)
+    );
+    background-image: linear-gradient(
+        to right top,
+        #d16ba5,
+        #c575b7,
+        #b67ec5,
+        #a488d0,
+        #9291d7,
+        #829ee2,
+        #70aaea,
+        #5eb5ef,
+        #46c8f8,
+        #37dafb,
+        #40ebf8,
+        #5ffbf1
+    );
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    display: -webkit-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+body .card-cnt {
+    width: 430px;
+    margin: 0 20px;
+    height: 541px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+body .card-cnt .img-cnt {
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    background-color: #2355f2;
+}
+body .card-cnt .img-cnt img {
+    width: 100%;
+    height: auto;
+}
+body .card-cnt .img-cnt h2 {
+    position: absolute;
+    color: #fff;
+    width: 310px;
+    text-align: center;
+    font-family: "Work Sans", sans-serif;
+    font-size: 26px;
+    font-weight: 600;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+body .card-cnt .bottom-cnt p[p="top"] {
+    color: #595959;
+    font-weight: 400;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    height: 38px;
+    margin: 0 auto;
+    width: 382px;
+    margin: 24px 24px;
+    text-align: center;
+}
+body .card-cnt .bottom-cnt .inp-sub input {
+    width: 259px;
+    font-family: "Work Sans", sans-serif;
+    border-radius: 5px;
+    height: 44px;
+    background: #f5f7fa;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: c;
+    border: 1px solid #e6e8f0;
+    color: #353a3a;
+    padding: 14px 18px;
+    margin: 0 0 16px 24px;
+}
+body .card-cnt .bottom-cnt .inp-sub input:focus {
+    outline: none;
+}
+body .card-cnt .bottom-cnt .inp-sub button {
+    background-color: #2355f2;
+    color: #fff;
+    width: 115px;
+    height: 44px;
+    border-radius: 5px;
+    padding: 14px 18px;
+    border: none;
+    margin-left: 8px;
+    font-weight: 600;
+    line-height: 16px;
+    font-size: 14px;
+    font-family: "Work Sans", sans-serif;
+}
+body .card-cnt .bottom-cnt .inp-sub button:hover {
+    cursor: pointer;
+}
+body .card-cnt .bottom-cnt p[p="mid"] {
+    color: #a6a6a6;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: "Work Sans", sans-serif;
+    margin-left: 24px;
+}
+body .card-cnt .bottom-cnt .avatar-cnt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 45px;
+    margin-top: 36px;
+    margin-bottom: 16px;
+}
+body .card-cnt .bottom-cnt .avatar-cnt .info p:first-of-type {
+    font-weight: 600;
+    line-height: 16px;
+    color: #000;
+    margin-left: 8px;
+}
+body .card-cnt .bottom-cnt .avatar-cnt .info p {
+    margin-left: 8px;
+    color: #595959;
+    font-weight: 400;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+}
+body .card-cnt .bottom-cnt p[p="bottom"] {
+    color: #595959;
+    font-weight: 400;
+    font-family: "Work Sans", sans-serif;
+    font-size: 14px;
+    width: 382px;
+    line-height: 19px;
+    font-size: 14;
+    text-align: center;
+    margin: 0 auto;
+}
+@media (max-width: 450px) {
+    body .card-cnt {
+        height: auto;
+        width: calc(100% - 1rem);
+    }
+    body .card-cnt .img-cnt h2 {
+        width: 90%;
+        font-size: 7vw;
+    }
+    body .card-cnt .bottom-cnt p[p="top"] {
+        margin: 24px auto;
+        width: 90%;
+    }
+    body .card-cnt .bottom-cnt .inp-sub {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+    body .card-cnt .bottom-cnt .inp-sub input {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 12px;
+    }
+    body .card-cnt .bottom-cnt .inp-sub button {
+        margin: 0 auto;
+        margin-bottom: 16px;
+    }
+    body .card-cnt .bottom-cnt p[p="mid"] {
+        text-align: center;
+    }
+    body .card-cnt .bottom-cnt .avatar-cnt {
+        margin-top: 24px;
+        width: 90%;
+    }
+    body .card-cnt .bottom-cnt p[p="bottom"] {
+        width: 90%;
+        padding-bottom: 16px;
+    }
+}
