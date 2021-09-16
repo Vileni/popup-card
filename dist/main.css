@@ -42,13 +42,15 @@ body {
         #5ffbf1
     );
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    display: -webkit-flex;
     -webkit-box-align: center;
+    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     -webkit-box-pack: center;
+    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
 }
@@ -79,6 +81,7 @@ body .card-cnt .img-cnt h2 {
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 body .card-cnt .bottom-cnt p[p="top"] {
@@ -137,9 +140,11 @@ body .card-cnt .bottom-cnt p[p="mid"] {
 }
 body .card-cnt .bottom-cnt .avatar-cnt {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
+    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     height: 45px;
@@ -173,6 +178,7 @@ body .card-cnt .bottom-cnt p[p="bottom"] {
 @media (max-width: 450px) {
     body .card-cnt {
         height: auto;
+        width: -webkit-calc(100% - 1rem);
         width: calc(100% - 1rem);
     }
     body .card-cnt .img-cnt h2 {
@@ -185,13 +191,16 @@ body .card-cnt .bottom-cnt p[p="bottom"] {
     }
     body .card-cnt .bottom-cnt .inp-sub {
         display: -webkit-box;
+        display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
         -ms-flex-direction: column;
         flex-direction: column;
         -webkit-box-align: center;
+        -webkit-align-items: center;
         -ms-flex-align: center;
         align-items: center;
     }
