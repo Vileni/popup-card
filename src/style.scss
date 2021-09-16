@@ -10,6 +10,12 @@
     box-sizing: border-box;
 }
 
+@supports not (display: flex) {
+    body {
+        height: 100vh;
+    }
+}
+
 @mixin for-p {
     color: global.$text-color;
     font-weight: 400;
@@ -18,7 +24,7 @@
 }
 
 body {
-    height: 100vh;
+    min-height: 100vh;
     background-image: linear-gradient(
         to right top,
         #d16ba5,
